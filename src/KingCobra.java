@@ -1,16 +1,18 @@
 
-public class Snake {
-	private final int infloor = 5;
-	private final int tofloor = 1;
-	private final int increase = -2;
+public final class KingCobra extends Snake {
+	private final int infloor = 11;
+	private final int tofloor = 3;
+	private final int increase = -4;
 	
+	@Override
 	public int getInfloor() {
 		return infloor;
 	}
 	
+	@Override
 	public void getSnake(Player player) {
 		System.out.println("Player position Floor-" + infloor);
-		System.out.println(player.getName() + " has reached a Snake FLoor");
+		System.out.println(player.getName() + " has reached a King Cobra FLoor");
 		player.setTotal(player.getTotal() + increase);
 		System.out.println("Total points " + player.getTotal());
 		player.setPos(tofloor);
