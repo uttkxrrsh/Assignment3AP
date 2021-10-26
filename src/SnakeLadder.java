@@ -41,6 +41,7 @@ public class SnakeLadder {
 			}
 			if(floors.isLadder()) {
 				floors.toLadder();
+				break;
 			}
 			if(floors.isSnake()) {
 				floors.toSnake();
@@ -51,6 +52,10 @@ public class SnakeLadder {
 			while(dice.getFaceValue() != 1) {
 				System.out.println("Hit enter to roll the dice");
 				sc.nextLine();
+				dice.roll();
+				if(dice.getFaceValue() == 1) {
+					break;
+				}
 				System.out.println("Dice gave 2\nPlayer cannot move");
 			}
 			System.out.println("Dice gave 1");
@@ -58,7 +63,7 @@ public class SnakeLadder {
 			floors.toemptyFloor();
 		}
 		if(player.getPos()==13) {
-			System.out.println("Game Over\n"+ player.getName()+ " accumulated " + player.getTotal() + "points");
+			System.out.println("Game Over\n"+ player.getName()+ " accumulated " + player.getTotal() + " points");
 		}
 	}
 
