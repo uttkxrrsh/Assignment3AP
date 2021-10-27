@@ -1,4 +1,5 @@
 
+
 public class Floors {
 	private Player _player;
 	private Ladder  ladder = new Ladder();
@@ -13,6 +14,7 @@ public class Floors {
 	public void toemptyFloor() {
 		System.out.println("Player position Floor-" + _player.getPos());
 		System.out.println(_player.getName() + " has reached an Empty FLoor");
+		_player.printPlayerPos(_player.getPos());
 		_player.setTotal(_player.getTotal() + 1);
 		System.out.println("Total points " + _player.getTotal());
 	}

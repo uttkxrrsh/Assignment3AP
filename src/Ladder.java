@@ -11,9 +11,9 @@ public class Ladder {
 	public void getLadder(Player player) {
 		System.out.println("Player position Floor-" + infloor);
 		System.out.println(player.getName() + " has reached a Ladder FLoor");
+		player.printPlayerPos(player.getPos());
 		player.setTotal(player.getTotal() + increase);
 		System.out.println("Total points " + player.getTotal());
 		player.setPos(tofloor);
 	}
-	
 }

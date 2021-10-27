@@ -13,6 +13,7 @@ public final class KingCobra extends Snake {
 	public void getSnake(Player player) {
 		System.out.println("Player position Floor-" + infloor);
 		System.out.println(player.getName() + " has reached a King Cobra FLoor");
+		player.printPlayerPos(player.getPos());
 		player.setTotal(player.getTotal() + increase);
 		System.out.println("Total points " + player.getTotal());
 		player.setPos(tofloor);

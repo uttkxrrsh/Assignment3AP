@@ -9,6 +9,17 @@ public final class Player {
 		this.pos = pos;
 	}
 	
+	public void printPlayerPos(int pos) {
+		String[] arr = {"START","Empty","Elevator","Empty","Empty","Snake","Empty","Empty","Ladder","Empty","Empty","King Cobra","Empty","FINISH",};
+		for(int i = 0; i<14; i++) {
+			if(i != pos) {
+				System.out.println(arr[i] + " Floor ");
+			}
+			else {
+				System.out.println(arr[i] + " Floor "+ "***" + name + " is on this floor" + "***");
+			}
+		}
+	}
 	
 	public String getName() {
 		return name;
